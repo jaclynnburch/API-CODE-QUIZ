@@ -1,65 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Code Quiz</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Game</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
   </head>
+
   <body>
+    <header>
+        <div class="header">
+            <!--high score button-->
+            <div>
+                <button class="button" id="score_check">View Highscores</button>
+            </div>
+            <!--time left-->
+            <div>
+                <p id="timer"> Time left: 60 s</p>
+            </div>
+        </div>
+    </header>
+
     <main>
-      <nav>
-        <li id="timer">Time: 0</li>
-      </nav>
-      <header class="header">
-        <h1>Coding Quiz Game</h1>
+        <div>
+            <!--first page-->
+            <section class="intro_page" id="intro_page">
+                <div id="introduction">
+                    <h1>
+                        Welcome to Coding Quiz Challenge
+                    </h1>
+                    <p id="instruction">
+                        This is a simple quiz on coding, try answering within the time limit!
+                    </p>
+                    <button class="button" id="start_button">Start Quiz</button>
+                </div>
+            </section>
 
-        <p>
-          Welcome to the coding quiz! Try to answer these questions correctly
-          within the time limit. Wrong answers will deduct points from your
-          score and 10 seconds from your remaining time. Good luck!
-        </p>
-        <button class="btn btn-lg" id="btn-start">Start</button>
-      </header>
-      <body>
-        <div class="card w-100 hidden" id="hidden">
-          <div class="card-body text-center" id="card-body">
-            <h5 class="card-title text-center">Question</h5>
-            <p class="card-text text-center question-text">
-              What does CSS stand for?
-            </p>
-            <button class="btn btn-primary" id="btn-0">
-              Cascading Style Sheets
-            </button>
+            <!--questions-->
+            <section class="question_page" id="question_page">
+                <div>
+                    <div>
+                        <h2 id = "ask_question">Ask the question</h2>
+                        <ul class ="ans_button">
+                            <li><button class ="choices button" id="answer_btn1" value="a">Answer1</button></li>
+                            <li><button class ="choices button" id="answer_btn2" value="b">Answer2</button></li>
+                            <li><button class ="choices button" id="answer_btn3" value="c">Answer3</button></li>
+                            <li><button class ="choices button" id="answer_btn4" value="d">Answer4</button></li>
+                        </ul>
+                    <div>
 
-            <button class="btn btn-secondary" id="btn-1">
-              Cascading Style Shortcuts
-            </button>
+                    <!--correct or wrong-->
+                    <div id="check_line">
+                        <p>Correct or Wrong</p>
+                    </div>
+                </div>
+            </section>
 
-            <button class="btn btn-success" id="btn-2">
-              Class Style Selectors
-            </button>
+            <!--last page-->
+            <section class="submit_page" id="submit_page">
+                <div>
+                    <h2 id="finish">All Done!</h2>
+                    <p id = "final_score">Your final score is: </p>
+                    <p>Enter initials
+                        <input id="initial">
+                        <button class="button" id="submit_btn">Submit</button>
+                    </p>
+                </div>
+            </section>
 
-            <button class="btn btn-danger" id="btn-3">Cool Style Sheets</button>
-          </div>
+            <!--high score link-->
+            <section class="highscore_page" id ="highscore_page">
+                <div>
+                    <h2>High Scores</h2>
+                    <div id="score_record"><p>Your record</p></div><br><br>
+                    <div>
+                        <button class="button" id="back_btn">Go back</button>
+                        <button class="button" id="clear_btn">Clear Highscores</button>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="btn" id="user-input-box">
-          <form id="form">
-            <input type="text" placeholder="name" id="name" />
-            <button id="submit" class="btn btn-large">Submit</button>
-          </form>
-        </div>
-        <div id="score-box"></div>
-      </body>
     </main>
-
     <script src="./assets/script.js"></script>
   </body>
 </html>
