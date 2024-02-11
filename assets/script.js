@@ -2,12 +2,12 @@ var QUESTIONS = [
     {
       question: "Commonly used data types do not include:",
       choices: ["strings", "booleans", "alerts", "numbers"],
-      answer: "alerts",
+      answer: "c",
     },
     {
       question: "The condition in an If / else statement is enclosed with ___.",
       choices: ["quotes", "curly brackets", "parenthesis", "square brackets"],
-      answer: "parenthesis",
+      answer: "c",
     },
     {
       question: "Arrays in JavaScript can be used to store ___.",
@@ -17,13 +17,13 @@ var QUESTIONS = [
         "booleans",
         "all the above",
       ],
-      answer: "all the above",
+      answer: "d",
     },
     {
       question:
         "String values must be enclosed within ___ when being assigned to variables",
       choices: ["commas", "curly brackets", "quotes", "parenthesis"],
-      answer: "quotes",
+      answer: "c",
     },
   ];
   //variables
